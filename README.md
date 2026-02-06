@@ -87,7 +87,7 @@ Si vous souhaitez exécuter les étapes une par une plutôt que d'utiliser `make
 
 * `make setup` : Installe les collections Ansible requises.
 * `make build` : Lance Packer pour créer l'image `my-custom-nginx:v1`.
-* `make import` : Importe l'image locale dans le registre interne de K3d (**Étape cruciale**).
+* `make import` : Importe l'image locale dans le registre interne de K3d .
 * `make deploy` : Exécute le playbook Ansible pour créer les ressources Kubernetes.
 * `make clean` : Nettoie l'environnement (suppression du cluster).
 
