@@ -1,9 +1,9 @@
 .PHONY: all setup cluster build import deploy check clean
 
-# 🎯 Commande par défaut : lance tout le processus de A à Z
+#  Commande par défaut : lance tout le processus de A à Z
 all: setup cluster build import deploy check
 
-# 🛠️ 1. Installation des dépendances (Packer, Ansible, Libs)
+#  1. Installation des dépendances (Packer, Ansible, Libs)
 setup:
 	@echo "--- [1/6] Installation des prérequis ---"
 	@# Correction préventive pour éviter l'erreur de dépôt yarn fréquente dans Codespaces
