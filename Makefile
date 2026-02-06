@@ -17,7 +17,7 @@ setup:
 	pip install --upgrade pip
 	pip install ansible kubernetes requests
 	ansible-galaxy collection install kubernetes.core
-	@echo "✅ Environnement prêt."
+	@echo " Environnement prêt."
 
 #  2. Création du cluster K3d (si inexistant)
 cluster:
@@ -26,26 +26,26 @@ cluster:
 	which k3d > /dev/null || curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 	@# Crée le cluster 'lab' seulement s'il n'existe pas déjà
 	k3d cluster list | grep -q "lab" || k3d cluster create lab --servers 1 --agents 2
-	@echo "✅ Cluster K3d opérationnel."
+	@echo " Cluster K3d opérationnel."
 
 #  3. Construction de l'image Docker avec Packer
 build:
 	@echo "--- [3/6] Build de l'image Packer ---"
 	packer init nginx.pkr.hcl
 	packer build nginx.pkr.hcl
-	@echo "✅ Image 'my-custom-nginx:v1' construite."
+	@echo " Image 'my-custom-nginx:v1' construite."
 
 #  4. Import de l'image dans le cluster (Étape critique pour K3d)
 import:
 	@echo "--- [4/6] Import de l'image dans K3d ---"
 	k3d image import my-custom-nginx:v1 -c lab
-	@echo "✅ Image importée dans le cluster."
+	@echo " Image importée dans le cluster."
 
 #  5. Déploiement via Ansible
 deploy:
 	@echo "--- [5/6] Déploiement Ansible ---"
 	ansible-playbook playbook.yml
-	@echo "✅ Playbook exécuté."
+	@echo " Playbook exécuté."
 
 #  6. Vérification finale
 check:
@@ -53,7 +53,7 @@ check:
 	@sleep 5 # Petite pause pour laisser le temps aux pods de démarrer
 	kubectl get pods
 	kubectl get svc
-	@echo "🎉 Succès ! L'application est déployée."
+	@echo " Succès ! L'application est déployée."
 
 #  Nettoyage (Optionnel)
 clean:
