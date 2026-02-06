@@ -1,4 +1,4 @@
-# 🚀 Atelier DevOps : De l'Image au Cluster
+#  Atelier DevOps : De l'Image au Cluster
 
 ![Packer](https://img.shields.io/badge/Packer-Build-blue?logo=packer)
 ![Ansible](https://img.shields.io/badge/Ansible-Deploy-red?logo=ansible)
@@ -10,7 +10,7 @@ L'objectif est d'industrialiser le cycle de vie d'une application Nginx : de la 
 
 ---
 
-## 🏗 Architecture du projet
+##  Architecture du projet
 
 Le projet utilise l'approche **Infrastructure as Code** (IaC) pour garantir la reproductibilité.
 
@@ -28,7 +28,7 @@ graph LR
 
 ---
 
-## 🛠 Prérequis
+##  Prérequis
 
 Ce projet est conçu pour être exécuté dans un **GitHub Codespace**.
 Les outils nécessaires sont installés automatiquement via le Makefile ou les scripts fournis :
@@ -39,7 +39,7 @@ Les outils nécessaires sont installés automatiquement via le Makefile ou les s
 
 ---
 
-## 🚀 Démarrage Rapide
+##  Démarrage Rapide
 
 L'ensemble du processus est automatisé grâce à un **Makefile**.
 
@@ -70,7 +70,7 @@ Ouvrez ensuite votre navigateur (ou l'onglet "PORTS" de VS Code) à l'adresse : 
 
 ---
 
-## 📂 Structure des fichiers
+##  Structure des fichiers
 
 | Fichier | Description |
 | :--- | :--- |
@@ -81,7 +81,7 @@ Ouvrez ensuite votre navigateur (ou l'onglet "PORTS" de VS Code) à l'adresse : 
 
 ---
 
-## 💡 Commandes détaillées (Makefile)
+##  Commandes détaillées (Makefile)
 
 Si vous souhaitez exécuter les étapes une par une plutôt que d'utiliser `make all` :
 
@@ -93,6 +93,3 @@ Si vous souhaitez exécuter les étapes une par une plutôt que d'utiliser `make
 
 ---
 
-## 📝 Auteur
-
-Projet réalisé par **Amir** dans le cadre de l'évaluation DevOps.
